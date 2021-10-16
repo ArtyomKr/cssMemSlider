@@ -1,0 +1,38 @@
+body {
+    --bg-color: #25282a;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    background: var(--bg-color);
+}
+
+.slider {
+    padding: 20px;
+
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slides::-webkit-scrollbar {
+    display: none;
+}
+
+.slides > div {
+    width: 100%;
+    height: 500px;
+
+    flex-shrink: 0;
+    scroll-snap-align: start;
+
+    background: white;
+    border: 1px solid black;
+}
