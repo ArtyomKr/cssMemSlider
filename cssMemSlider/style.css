@@ -1,6 +1,7 @@
 body {
     --bg-color: #25282a;
     --blue: #71abfe;
+    font-family: sans-serif;
 }
 
 .container {
