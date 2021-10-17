@@ -1,5 +1,6 @@
 body {
     --bg-color: #25282a;
+    --blue: #71abfe;
 }
 
 .container {
@@ -17,14 +18,11 @@ body {
 .slides {
     display: flex;
 
-    overflow: scroll;
+    overflow: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 }
 
-.slides::-webkit-scrollbar {
-    display: none;
-}
 
 .slides > div {
     width: 100%;
@@ -35,4 +33,38 @@ body {
 
     background: white;
     border: 1px solid black;
+}
+
+.slide-img {
+    display: block;
+    width: 100%;
+    height: calc(100% - 1rem);
+}
+
+.slide-text {
+    margin: 0;
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-end
+}
+
+.navigation > a {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+    margin-top: 5%;
+
+    border-radius: 50%;
+    background: var(--blue);
+}
+
+.navigation > a:hover {
+    background: #ffffff;
+}
+
+.navigation > a:active {
+    background: #bcbdbd;
 }
